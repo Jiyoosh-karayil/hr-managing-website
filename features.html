@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore HR Managing features: employee management, attendance tracking, holiday requests, document storage, annual reviews, and more. Built for UK compliance.">
+<title>Features - HR Managing</title>
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.75l6 6 9-13.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></symbol>
+  <symbol id="i-employees" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></symbol>
+  <symbol id="i-review" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></symbol>
+  <symbol id="i-medical" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></symbol>
+  <symbol id="i-notice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M6 6l12 12"/></symbol>
+</svg>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="nav">
+  <div class="nav-in">
+    <a href="index.html" class="logo"><img id="site-logo" src="logo.png" alt="HR Managing Logo" class="logo-img"></a>
+    <div class="nav-links">
+      <a href="index.html" class="nl">Home</a>
+      <a href="about.html" class="nl">About Us</a>
+      <a href="features.html" class="nl active">Features</a>
+      <a href="sponsor-checker.html" class="nl">Sponsor Licence Checker</a>
+      <a href="https://user-auth.apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/auth/realms/ExternalChecker/protocol/openid-connect/auth?redirect_uri=https%3A%2F%2Fright-to-work.service.gov.uk%2Frtw-view%2Fchecker-details%2Fredirection&state=46e5a3be7d4324e58a7e73ad641fcfc8&client_id=external-checker-rtwr&nonce=197c39160ec27401a6d055d435554153&response_type=code&scope=openid%20email%20profile" class="nl" target="_blank" rel="noopener noreferrer">Right to Work <svg width="11" height="11"><use href="#i-ext"/></svg></a>
+      <a href="index.html#pricing" class="nl">Pricing</a>
+      <a href="contact.html" class="nl">Contact Us</a>
+      <a href="https://hms.hrmanaging.co.uk/company-request" class="nav-cta" target="_blank" rel="noopener">Book a Free Trial <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+    </div>
+    <button class="mob-tog" onclick="document.getElementById('mob-menu').classList.add('open')" aria-label="Open menu"><svg width="22" height="22"><use href="#i-menu"/></svg></button>
+  </div>
+</nav>
+<div id="mob-menu" class="mob-menu">
+  <div class="mob-hdr"><div class="logo-text">HR<span>Managing</span></div><button class="mob-close" onclick="document.getElementById('mob-menu').classList.remove('open')" aria-label="Close menu"><svg width="22" height="22"><use href="#i-close"/></svg></button></div>
+  <a href="index.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Home</a>
+  <a href="about.html" onclick="document.getElementById('mob-menu').classList.remove('open')">About Us</a>
+  <a href="features.html" style="color:var(--b600);font-weight:600" onclick="document.getElementById('mob-menu').classList.remove('open')">Features</a>
+  <a href="sponsor-checker.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Sponsor Licence Checker</a>
+  <a href="https://user-auth.apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/auth/realms/ExternalChecker/protocol/openid-connect/auth?redirect_uri=https%3A%2F%2Fright-to-work.service.gov.uk%2Frtw-view%2Fchecker-details%2Fredirection&state=46e5a3be7d4324e58a7e73ad641fcfc8&client_id=external-checker-rtwr&nonce=197c39160ec27401a6d055d435554153&response_type=code&scope=openid%20email%20profile" target="_blank" rel="noopener noreferrer" onclick="document.getElementById('mob-menu').classList.remove('open')">Right to Work ↗</a>
+  <a href="index.html#pricing" onclick="document.getElementById('mob-menu').classList.remove('open')">Pricing</a>
+  <a href="contact.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Contact Us</a>
+  <a href="https://hms.hrmanaging.co.uk/company-request" target="_blank" rel="noopener" style="color:var(--b600);font-weight:700">Book a Free Trial</a>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" style="min-height:auto;padding:60px 24px">
+  <div class="hero-in" style="grid-template-columns:1fr;gap:20px;text-align:center">
+    <div class="reveal">
+      <div class="hero-badge"><div class="hero-dot"></div>All Features</div>
+      <h1 style="font-size:clamp(34px,4vw,52px);color:white;margin-bottom:18px;letter-spacing:-0.025em">Everything you need to manage<br><em>your workforce</em></h1>
+      <p style="font-size:16px;color:rgba(255,255,255,0.65);margin-bottom:0;max-width:620px;margin-left:auto;margin-right:auto;line-height:1.75;font-weight:400">One dashboard. Every module. From attendance tracking to document storage, HR Managing gives you the tools to run a compliant, organised business.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FEATURES GRID ═══════════════ -->
+<section style="padding:80px 24px;background:white">
+  <div style="max-width:1160px;margin:0 auto">
+    <div class="sec-hdr reveal">
+      <div class="sec-tag">Core Modules</div>
+      <h2>Built for compliance, designed for simplicity</h2>
+      <p>Every module is designed to help UK businesses maintain the records the Home Office expects.</p>
+    </div>
+    <div class="fg">
+      <div class="fc reveal"><div class="fc-ico"><svg width="22" height="22"><use href="#i-employees"/></svg></div><h3>Employee Management</h3><p>Add, edit, and manage complete employee profiles. Store personal details, job titles, start dates, and contract information in one place.</p></div>
+      <div class="fc reveal" style="transition-delay:.06s"><div class="fc-ico"><svg width="22" height="22"><use href="#i-clock"/></svg></div><h3>Attendance Tracking</h3><p>Record daily attendance with employee name, date, start and end times. Build an auditable log that satisfies Home Office requirements.</p></div>
+      <div class="fc reveal" style="transition-delay:.12s"><div class="fc-ico"><svg width="22" height="22"><use href="#i-calendar"/></svg></div><h3>Holiday and Leave</h3><p>Employees submit holiday requests. Managers approve or decline. Full leave history is recorded automatically for compliance.</p></div>
+      <div class="fc reveal" style="transition-delay:.18s"><div class="fc-ico"><svg width="22" height="22"><use href="#i-doc"/></svg></div><h3>Document Storage</h3><p>Upload and store contracts, right to work documents, passports, and visa copies. Everything organised per employee, always accessible.</p></div>
+      <div class="fc reveal" style="transition-delay:.24s"><div class="fc-ico"><svg width="22" height="22"><use href="#i-review"/></svg></div><h3>Annual Reviews</h3><p>Track employee performance reviews on a structured schedule. Maintain records of goals, feedback, and development plans.</p></div>
+      <div class="fc reveal" style="transition-delay:.30s"><div class="fc-ico"><svg width="22" height="22"><use href="#i-medical"/></svg></div><h3>Medical Questionnaires</h3><p>Collect and store health declarations securely. Meet your duty of care obligations with proper documentation.</p></div>
+      <div class="fc reveal" style="transition-delay:.36s"><div class="fc-ico"><svg width="22" height="22"><use href="#i-notice"/></svg></div><h3>Notice Board</h3><p>Post company-wide announcements. Keep your team informed about policy changes, events, and important updates.</p></div>
+      <div class="fc reveal" style="transition-delay:.42s"><div class="fc-ico"><svg width="22" height="22"><use href="#i-shield"/></svg></div><h3>New Starter Onboarding</h3><p>Structured onboarding forms for new hires. Collect all required information before day one so records are complete from the start.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ DEMO PREVIEW ═══════════════ -->
+<section style="padding:80px 24px;background:var(--s50);border-top:1px solid var(--s200);border-bottom:1px solid var(--s200)">
+  <div style="max-width:900px;margin:0 auto;text-align:center">
+    <div class="sec-hdr reveal">
+      <div class="sec-tag">Dashboard Preview</div>
+      <h2>See it in action</h2>
+      <p>A clean, simple dashboard that puts everything at your fingertips.</p>
+    </div>
+    <!-- Placeholder mockup — replace with real screenshot when available -->
+    <div class="reveal from-scale" style="transition-delay:.1s">
+      <div class="mockup" style="max-width:800px;margin:0 auto;box-shadow:0 12px 64px rgba(0,0,0,.12)">
+        <div class="mk-bar">
+          <div class="mk-dot" style="background:#EA4335"></div>
+          <div class="mk-dot" style="background:#FBBC04"></div>
+          <div class="mk-dot" style="background:#34A853"></div>
+          <div class="mk-url">hms.hrmanaging.co.uk/dashboard</div>
+        </div>
+        <div class="mk-body" style="padding:28px">
+          <div class="mk-greet">Good Morning, Sarah</div>
+          <div class="mk-sub" style="margin-bottom:20px">Your company dashboard at a glance.</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+            <div class="mk-card"><div class="mk-card-l">Employees</div><div class="mk-card-v mc-b">12</div></div>
+            <div class="mk-card"><div class="mk-card-l">Attendance Today</div><div class="mk-card-v mc-g">10/12</div></div>
+            <div class="mk-card"><div class="mk-card-l">Holiday Requests</div><div class="mk-card-v">3</div></div>
+            <div class="mk-card"><div class="mk-card-l">Active Notices</div><div class="mk-card-v mc-b">2</div></div>
+            <div class="mk-card"><div class="mk-card-l">Pending Reviews</div><div class="mk-card-v">4/12</div></div>
+            <div class="mk-card"><div class="mk-card-l">Documents Stored</div><div class="mk-card-v mc-g">48</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ USE CASES ═══════════════ -->
+<section style="padding:80px 24px;background:white">
+  <div style="max-width:1160px;margin:0 auto">
+    <div class="sec-hdr reveal">
+      <div class="sec-tag">Use Cases</div>
+      <h2>Built for businesses like yours</h2>
+      <p>Whether you sponsor workers, run a restaurant, or manage a professional team, HR Managing fits your workflow.</p>
+    </div>
+    <div class="ug">
+      <div class="uc reveal">
+        <div class="uc-num">01</div>
+        <h3>Sponsorship Licence Holders</h3>
+        <p>If you hold a Home Office sponsorship licence, you are legally required to maintain proper records. HR Managing was built specifically for this.</p>
+        <ul class="ucl">
+          <li><svg width="14" height="14"><use href="#i-check"/></svg> Attendance logs that satisfy audit requirements</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg> Right to work document storage per employee</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg> Leave and absence tracking with full history</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg> Complete employee profiles with visa details</li>
+        </ul>
+      </div>
+      <div class="uc reveal" style="transition-delay:.08s">
+        <div class="uc-num">02</div>
+        <h3>Retail and Hospitality</h3>
+        <p>High staff turnover means more onboarding, more documents, and more risk. HR Managing keeps everything organised as your team changes.</p>
+        <ul class="ucl">
+          <li><svg width="14" height="14"><use href="#i-check"/></svg> Fast onboarding forms for new starters</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg> Shift attendance tracking with timestamps</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg> Holiday management across seasonal staff</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg> Document storage for contracts and ID checks</li>
+        </ul>
+      </div>
+      <div class="uc reveal" style="transition-delay:.16s">
+        <div class="uc-num">03</div>
+        <h3>Professional Services</h3>
+        <p>Accountants, solicitors, consultancies — if you employ staff, you need proper HR records. HR Managing replaces the spreadsheets and filing cabinets.</p>
+        <ul class="ucl">
+          <li><svg width="14" height="14"><use href="#i-check"/></svg> Annual review tracking for performance management</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg> Centralised employee records for all offices</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg> Medical questionnaires and health declarations</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg> Company notice board for policy updates</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cta-sec">
+  <div class="cta-box reveal from-scale">
+    <h2>See all features in action.<br>Start your free trial today.</h2>
+    <p>Full access to every module for 14 days. No credit card. No commitment. Setup in under 5 minutes.</p>
+    <div class="cta-btns">
+      <a href="https://hms.hrmanaging.co.uk/company-request" class="btn bw bl" target="_blank" rel="noopener">Start Your 14 Day Free Trial <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+      <a href="index.html#pricing" class="btn bg bl">View Pricing</a>
+    </div>
+    <div class="cta-note">No credit card required · Cancel anytime · Full access to all features</div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="footer-in">
+    <p>&copy; 2026 HR Managing. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="help.html">Help</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

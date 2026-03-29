@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact HR Managing or find answers to frequently asked questions about our UK HR management software.">
+<title>Contact Us - HR Managing</title>
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.75l6 6 9-13.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M6 6l12 12"/></symbol>
+</svg>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="nav">
+  <div class="nav-in">
+    <a href="index.html" class="logo"><img id="site-logo" src="logo.png" alt="HR Managing Logo" class="logo-img"></a>
+    <div class="nav-links">
+      <a href="index.html" class="nl">Home</a>
+      <a href="about.html" class="nl">About Us</a>
+      <a href="features.html" class="nl">Features</a>
+      <a href="sponsor-checker.html" class="nl">Sponsor Licence Checker</a>
+      <a href="https://user-auth.apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/auth/realms/ExternalChecker/protocol/openid-connect/auth?redirect_uri=https%3A%2F%2Fright-to-work.service.gov.uk%2Frtw-view%2Fchecker-details%2Fredirection&state=46e5a3be7d4324e58a7e73ad641fcfc8&client_id=external-checker-rtwr&nonce=197c39160ec27401a6d055d435554153&response_type=code&scope=openid%20email%20profile" class="nl" target="_blank" rel="noopener noreferrer">Right to Work <svg width="11" height="11"><use href="#i-ext"/></svg></a>
+      <a href="index.html#pricing" class="nl">Pricing</a>
+      <a href="contact.html" class="nl active">Contact Us</a>
+      <a href="https://hms.hrmanaging.co.uk/company-request" class="nav-cta" target="_blank" rel="noopener">Book a Free Trial <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+    </div>
+    <button class="mob-tog" onclick="document.getElementById('mob-menu').classList.add('open')" aria-label="Open menu"><svg width="22" height="22"><use href="#i-menu"/></svg></button>
+  </div>
+</nav>
+<div id="mob-menu" class="mob-menu">
+  <div class="mob-hdr"><div class="logo-text">HR<span>Managing</span></div><button class="mob-close" onclick="document.getElementById('mob-menu').classList.remove('open')" aria-label="Close menu"><svg width="22" height="22"><use href="#i-close"/></svg></button></div>
+  <a href="index.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Home</a>
+  <a href="about.html" onclick="document.getElementById('mob-menu').classList.remove('open')">About Us</a>
+  <a href="features.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Features</a>
+  <a href="sponsor-checker.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Sponsor Licence Checker</a>
+  <a href="https://user-auth.apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/auth/realms/ExternalChecker/protocol/openid-connect/auth?redirect_uri=https%3A%2F%2Fright-to-work.service.gov.uk%2Frtw-view%2Fchecker-details%2Fredirection&state=46e5a3be7d4324e58a7e73ad641fcfc8&client_id=external-checker-rtwr&nonce=197c39160ec27401a6d055d435554153&response_type=code&scope=openid%20email%20profile" target="_blank" rel="noopener noreferrer" onclick="document.getElementById('mob-menu').classList.remove('open')">Right to Work ↗</a>
+  <a href="index.html#pricing" onclick="document.getElementById('mob-menu').classList.remove('open')">Pricing</a>
+  <a href="contact.html" style="color:var(--b600);font-weight:600" onclick="document.getElementById('mob-menu').classList.remove('open')">Contact Us</a>
+  <a href="https://hms.hrmanaging.co.uk/company-request" target="_blank" rel="noopener" style="color:var(--b600);font-weight:700">Book a Free Trial</a>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" style="min-height:auto;padding:60px 24px">
+  <div class="hero-in" style="grid-template-columns:1fr;gap:20px;text-align:center">
+    <div class="reveal">
+      <h1 style="font-size:clamp(34px,4vw,52px);color:white;margin-bottom:18px;letter-spacing:-0.025em">Get in touch</h1>
+      <p style="font-size:16px;color:rgba(255,255,255,0.65);margin-bottom:0;max-width:550px;margin-left:auto;margin-right:auto;line-height:1.75;font-weight:400">Have a question about HR Managing? Check our FAQ below or reach out to our team directly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section style="padding:80px 24px;background:white">
+  <div style="max-width:1060px;margin:0 auto">
+    <div class="sec-hdr reveal">
+      <div class="sec-tag">FAQ</div>
+      <h2>Frequently asked questions</h2>
+      <p>Everything you need to know about HR Managing.</p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item reveal">
+        <button class="faq-q">What is HR Managing?<svg width="16" height="16"><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>HR Managing is a cloud-based Human Resource Management System built specifically for UK small businesses. It helps you manage employee records, track attendance, handle holiday requests, store documents, conduct annual reviews, and stay compliant with Home Office requirements — all from one simple dashboard.</p></div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:.03s">
+        <button class="faq-q">Who is it built for?<svg width="16" height="16"><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>HR Managing is designed for UK small businesses, particularly those holding or applying for a sponsorship licence. If you employ staff and need to maintain proper records for compliance with the Home Office or UK employment regulations, HR Managing is built for you.</p></div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:.06s">
+        <button class="faq-q">Is HR Managing Home Office compliant?<svg width="16" height="16"><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>Yes. Every feature is designed to help you maintain the records that the Home Office expects during an audit. This includes attendance logs, absence tracking, right to work document storage, and complete employee profiles with visa and employment details.</p></div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:.09s">
+        <button class="faq-q">How does the 14 day free trial work?<svg width="16" height="16"><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>You sign up through our website and get full access to every feature for 14 days. No credit card is required. At the end of the trial, you can choose a plan that suits your team size, or your account will simply become inactive — no surprise charges.</p></div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:.12s">
+        <button class="faq-q">How much does it cost?<svg width="16" height="16"><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>Pricing is per employee per month, with volume discounts. Starter plan (1 to 10 employees) is £10 per employee. Growth plan (11 to 50 employees) is £8 per employee. Business plan (51 or more employees) is £6 per employee. All plans include every feature.</p></div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:.15s">
+        <button class="faq-q">Can employees log in too?<svg width="16" height="16"><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>Yes. Employees can log in to view their own profiles, submit holiday requests, check the company notice board, and update their personal details. Access is controlled by the company administrator, so you decide what each person can see and do.</p></div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:.18s">
+        <button class="faq-q">Is my data secure?<svg width="16" height="16"><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>Absolutely. HR Managing uses a multi-tenant architecture where each company's data is completely isolated. Your records are never shared with other companies on the platform. All data is encrypted and hosted on UK-based cloud infrastructure.</p></div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:.21s">
+        <button class="faq-q">Can I store right to work documents?<svg width="16" height="16"><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>Yes. You can upload and store contracts, passports, visa copies, right to work check documents, and any other files against each employee's profile. Documents are organised per employee and accessible at any time.</p></div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:.24s">
+        <button class="faq-q">Do I need technical knowledge?<svg width="16" height="16"><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>Not at all. HR Managing is designed for business owners, not IT professionals. You can set up your account in under 5 minutes, and the dashboard is intuitive enough to use without any training. If you can use email, you can use HR Managing.</p></div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:.27s">
+        <button class="faq-q">What happens after the trial?<svg width="16" height="16"><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>At the end of your 14 day trial, you choose a plan based on your team size and continue using the platform. All your data from the trial is preserved. If you decide not to continue, your account simply becomes inactive — there are no charges or penalties.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT FORM ═══════════════ -->
+<section style="padding:80px 24px;background:var(--s50);border-top:1px solid var(--s200)">
+  <div style="max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start" class="contact-grid">
+
+    <!-- Left: contact info -->
+    <div class="reveal">
+      <div class="sec-tag">Contact Us</div>
+      <h2 style="font-size:clamp(24px,3vw,34px);margin-bottom:16px">We are here to help</h2>
+      <p style="font-size:15px;line-height:1.8;color:var(--s600);margin-bottom:32px">Whether you have a question about features, pricing, trials, or compliance — our team is ready to help. You can also start a free trial instantly without speaking to anyone.</p>
+
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;align-items:flex-start;gap:14px">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--b50);color:var(--b600);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:var(--s900);margin-bottom:2px">Email</div>
+            <div style="font-size:13.5px;color:var(--s500)">support@hrmanaging.co.uk</div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:14px">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--b50);color:var(--b600);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:var(--s900);margin-bottom:2px">Response time</div>
+            <div style="font-size:13.5px;color:var(--s500)">We typically reply within 24 hours on business days</div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:14px">
+          <div style="width:40px;height:40px;border-radius:10px;background:#E6F4EA;color:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="20" height="20"><use href="#i-check"/></svg>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:var(--s900);margin-bottom:2px">Prefer to just get started?</div>
+            <div style="font-size:13.5px;color:var(--s500)"><a href="https://hms.hrmanaging.co.uk/company-request" target="_blank" rel="noopener" style="color:var(--b600);text-decoration:none;font-weight:600">Start your free trial</a> — no call or email needed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: contact form UI (redirects to app signup for now) -->
+    <div class="reveal from-right">
+      <div style="padding:36px;background:white;border-radius:18px;border:1px solid var(--s200);box-shadow:0 4px 24px rgba(0,0,0,.04)">
+        <div style="font-size:18px;font-weight:700;color:var(--s900);margin-bottom:4px;font-family:var(--fd);letter-spacing:-0.02em">Send us a message</div>
+        <div style="font-size:13px;color:var(--s500);margin-bottom:24px">We will get back to you as soon as possible.</div>
+
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div>
+            <label style="display:block;font-size:13px;font-weight:600;color:var(--s700);margin-bottom:6px">Full Name</label>
+            <input type="text" id="contact-name" placeholder="Your name" style="width:100%;padding:12px 14px;border:1.5px solid var(--s200);border-radius:9px;font-family:var(--fb);font-size:14px;color:var(--s900);outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--b600)'" onblur="this.style.borderColor='var(--s200)'">
+          </div>
+          <div>
+            <label style="display:block;font-size:13px;font-weight:600;color:var(--s700);margin-bottom:6px">Email Address</label>
+            <input type="email" id="contact-email" placeholder="you@company.co.uk" style="width:100%;padding:12px 14px;border:1.5px solid var(--s200);border-radius:9px;font-family:var(--fb);font-size:14px;color:var(--s900);outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--b600)'" onblur="this.style.borderColor='var(--s200)'">
+          </div>
+          <div>
+            <label style="display:block;font-size:13px;font-weight:600;color:var(--s700);margin-bottom:6px">Company Name</label>
+            <input type="text" id="contact-company" placeholder="Your company" style="width:100%;padding:12px 14px;border:1.5px solid var(--s200);border-radius:9px;font-family:var(--fb);font-size:14px;color:var(--s900);outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--b600)'" onblur="this.style.borderColor='var(--s200)'">
+          </div>
+          <div>
+            <label style="display:block;font-size:13px;font-weight:600;color:var(--s700);margin-bottom:6px">Message</label>
+            <textarea id="contact-msg" rows="4" placeholder="How can we help?" style="width:100%;padding:12px 14px;border:1.5px solid var(--s200);border-radius:9px;font-family:var(--fb);font-size:14px;color:var(--s900);outline:none;resize:vertical;transition:border-color .2s" onfocus="this.style.borderColor='var(--b600)'" onblur="this.style.borderColor='var(--s200)'"></textarea>
+          </div>
+          <!-- Temporarily redirects to the app signup page -->
+          <a href="https://hms.hrmanaging.co.uk/company-request" target="_blank" rel="noopener" class="btn bp" style="width:100%;justify-content:center;text-align:center;margin-top:4px">Get Started <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+          <div style="font-size:11.5px;color:var(--s400);text-align:center;line-height:1.5">By submitting, you agree to our <a href="privacy.html" style="color:var(--b600);text-decoration:none">privacy policy</a>. We will never share your information.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cta-sec">
+  <div class="cta-box reveal from-scale">
+    <h2>Still have questions?<br>Try it yourself — free for 14 days.</h2>
+    <p>The fastest way to understand HR Managing is to use it. Full access, no credit card, cancel anytime.</p>
+    <div class="cta-btns">
+      <a href="https://hms.hrmanaging.co.uk/company-request" class="btn bw bl" target="_blank" rel="noopener">Start Your 14 Day Free Trial <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="cta-note">No credit card required · Cancel anytime · Full access to all features</div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="footer-in">
+    <p>&copy; 2026 HR Managing. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="help.html">Help</a>
+      <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers" target="_blank">Sponsor Register</a>
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

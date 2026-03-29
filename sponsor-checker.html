@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Search the UK Home Office Register of Licensed Sponsors. Check if a company holds a valid sponsorship licence instantly and for free.">
+<title>Sponsor Licence Checker - Search UK Home Office Register</title>
+
+<link rel="icon" href="favicon.png">
+
+<!-- FONTS: Outfit — premium geometric sans, distinctive character similar to Qatar Airways' Jotia -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SVG ICON DEFINITIONS (reusable via <use>)
+     ═══════════════════════════════════════════════════════════ -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.75l6 6 9-13.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"></path><path d="m21 21-4.35-4.35"></path></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M6 6l12 12"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></symbol>
+  <symbol id="i-loading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4m0 12v4M4.22 4.22l2.83 2.83m5.9 5.9l2.83 2.83M2 12h4m12 0h4M4.22 19.78l2.83-2.83m5.9-5.9l2.83-2.83"/></symbol>
+</svg>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="nav" id="home">
+  <div class="nav-in">
+    <a href="index.html" class="logo">
+      <img id="site-logo" src="logo.png" alt="HR Managing Logo" class="logo-img">
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nl">Home</a>
+      <a href="about.html" class="nl">About Us</a>
+      <a href="features.html" class="nl">Features</a>
+      <a href="sponsor-checker.html" class="nl active">Sponsor Licence Checker</a>
+      <a href="https://user-auth.apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/auth/realms/ExternalChecker/protocol/openid-connect/auth?redirect_uri=https%3A%2F%2Fright-to-work.service.gov.uk%2Frtw-view%2Fchecker-details%2Fredirection&state=46e5a3be7d4324e58a7e73ad641fcfc8&client_id=external-checker-rtwr&nonce=197c39160ec27401a6d055d435554153&response_type=code&scope=openid%20email%20profile" class="nl" target="_blank" rel="noopener noreferrer">Right to Work <svg width="11" height="11"><use href="#i-ext"/></svg></a>
+      <a href="index.html#pricing" class="nl">Pricing</a>
+      <a href="contact.html" class="nl">Contact Us</a>
+      <a href="https://hms.hrmanaging.co.uk/company-request" class="nav-cta" target="_blank" rel="noopener">Book a Free Trial <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+    </div>
+    <button class="mob-tog" onclick="document.getElementById('mob-menu').classList.add('open')" aria-label="Open menu">
+      <svg width="22" height="22"><use href="#i-menu"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mob-menu" class="mob-menu">
+  <div class="mob-hdr">
+    <div class="logo-text">HR<span>Managing</span></div>
+    <button class="mob-close" onclick="document.getElementById('mob-menu').classList.remove('open')" aria-label="Close menu">
+      <svg width="22" height="22"><use href="#i-close"/></svg>
+    </button>
+  </div>
+  <a href="index.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Home</a>
+  <a href="about.html" onclick="document.getElementById('mob-menu').classList.remove('open')">About Us</a>
+  <a href="features.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Features</a>
+  <a href="sponsor-checker.html" style="color:var(--b600);font-weight:600">Sponsor Licence Checker</a>
+  <a href="https://user-auth.apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/auth/realms/ExternalChecker/protocol/openid-connect/auth?redirect_uri=https%3A%2F%2Fright-to-work.service.gov.uk%2Frtw-view%2Fchecker-details%2Fredirection&state=46e5a3be7d4324e58a7e73ad641fcfc8&client_id=external-checker-rtwr&nonce=197c39160ec27401a6d055d435554153&response_type=code&scope=openid%20email%20profile" target="_blank" rel="noopener noreferrer">Right to Work</a>
+  <a href="index.html#pricing" onclick="document.getElementById('mob-menu').classList.remove('open')">Pricing</a>
+  <a href="contact.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Contact Us</a>
+  <a href="https://hms.hrmanaging.co.uk/company-request" target="_blank" rel="noopener" style="color:var(--b600);font-weight:700">Book a Free Trial</a>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" style="min-height:auto;padding:60px 24px">
+  <div class="hero-in" style="grid-template-columns:1fr;gap:20px;text-align:center">
+    <div class="reveal">
+      <h1 style="font-size:clamp(34px,4vw,52px);color:white;margin-bottom:18px;letter-spacing:-0.025em">Check a Sponsor Licence Instantly</h1>
+      <p style="font-size:16px;color:rgba(255,255,255,0.65);margin-bottom:0;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.75;font-weight:400">Search the live UK Home Office Register of Licensed Sponsors. Verify if a company holds a valid licence to sponsor migrant workers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ MAIN CONTENT ═══════════════ -->
+<div style="background:white;padding:60px 24px">
+  <div style="max-width:1100px;margin:0 auto">
+    
+    <!-- Counter + Search Section -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:60px" class="sponsor-grid">
+      
+      <!-- Counter (left) -->
+      <div class="reveal">
+        <div style="font-size:11.5px;font-weight:700;color:var(--b600);text-transform:uppercase;letter-spacing:.12em;margin-bottom:18px;display:flex;align-items:center;gap:7px"><span style="display:inline-block;width:22px;height:2px;background:var(--b600);border-radius:2px"></span>Live Data</div>
+        <div style="font-family:var(--fd);font-size:clamp(48px,7vw,80px);font-weight:800;color:var(--s900);line-height:1;margin-bottom:10px;letter-spacing:-0.04em">
+          <span id="sponsor-counter">—</span>
+        </div>
+        <div style="font-size:15px;color:var(--s500);line-height:1.7">
+          Licensed sponsors on the UK Home Office register. Data is fetched live from gov.uk and updated frequently.
+        </div>
+      </div>
+
+      <!-- Search (right) -->
+      <div class="reveal from-right">
+        <div style="font-size:14px;font-weight:600;color:var(--s800);margin-bottom:12px;letter-spacing:-0.01em">Search by Company Name</div>
+        <div style="position:relative;margin-bottom:12px">
+          <svg style="position:absolute;left:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--s400);pointer-events:none" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"></path><path d="m21 21-4.35-4.35"></path></svg>
+          <input type="text" id="search-input" placeholder="e.g. Acme Ltd, Tech Corp..." style="width:100%;padding:15px 16px 15px 46px;border:1.5px solid var(--s200);border-radius:10px;font-family:var(--fb);font-size:15px;color:var(--s900);transition:border-color .25s,box-shadow .25s;background:white;outline:none" onfocus="this.style.borderColor='var(--b600)';this.style.boxShadow='0 0 0 3px rgba(66,133,244,.12)'" onblur="this.style.borderColor='var(--s200)';this.style.boxShadow='none'" onkeyup="filterSponsors()">
+        </div>
+        <div style="font-size:12.5px;color:var(--s400)">Type any part of the company name to search</div>
+      </div>
+    </div>
+
+    <!-- Loading State -->
+    <div id="loading-state" style="text-align:center;padding:48px 24px;display:none">
+      <div style="display:inline-flex;align-items:center;gap:12px;color:var(--b600);font-size:14px;font-weight:600">
+        <svg style="width:20px;height:20px;animation:spin 1s linear infinite" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4m0 12v4M4.22 4.22l2.83 2.83m5.9 5.9l2.83 2.83M2 12h4m12 0h4M4.22 19.78l2.83-2.83m5.9-5.9l2.83-2.83"/></svg>
+        <span id="loading-msg">Fetching live data from the Home Office register...</span>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--s400)">This may take a moment — the register is a large file</div>
+      <style>@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      @media(max-width:768px) {
+        .sponsor-grid { grid-template-columns:1fr !important; gap:32px !important; text-align:center; }
+        .sponsor-grid .reveal { display:flex; flex-direction:column; align-items:center; }
+        .cta-grid { grid-template-columns:1fr !important; gap:32px !important; text-align:center; }
+      }</style>
+    </div>
+
+    <!-- Error State -->
+    <div id="error-state" style="text-align:center;padding:60px 24px;display:none">
+      <div style="width:48px;height:48px;border-radius:12px;background:#fef2f2;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
+        <svg style="width:24px;height:24px;color:#EA4335" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+      </div>
+      <div style="font-size:16px;font-weight:600;color:var(--s800);margin-bottom:8px">Could not load sponsor data</div>
+      <div class="error-msg" style="font-size:13.5px;color:var(--s500);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.6">The Home Office register could not be fetched. This may be a temporary network issue.</div>
+      <button onclick="retryFetch()" style="display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:var(--b600);color:white;border:none;border-radius:9px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--fb)">Try Again</button>
+      <div style="margin-top:14px;font-size:12px;color:var(--s400)">Or visit the <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers" target="_blank" rel="noopener" style="color:var(--b600)">Home Office register directly</a></div>
+    </div>
+
+    <!-- Results Table -->
+    <div id="results-container" style="display:none">
+      <div style="margin-bottom:12px;font-size:14px;color:var(--s600);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <span>Found <strong id="result-count" style="color:var(--s900)">0</strong> licensed sponsors</span>
+        <span style="font-size:12px;color:var(--s400)">Source: UK Home Office Register (live data)</span>
+      </div>
+      <div id="results-limit-note" style="display:none;margin-bottom:12px;padding:10px 14px;background:var(--b50);border-radius:8px;font-size:12.5px;color:var(--s600);border:1px solid var(--b100)"></div>
+      <div style="border:1px solid var(--s200);border-radius:14px;overflow:auto;max-height:600px;box-shadow:0 2px 16px rgba(0,0,0,.04)">
+        <table style="width:100%;border-collapse:collapse;font-size:14px">
+          <thead style="background:var(--s50);position:sticky;top:0;z-index:1">
+            <tr style="border-bottom:1px solid var(--s200)">
+              <th style="padding:14px 18px;text-align:left;font-weight:600;color:var(--s800);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em">Company Name</th>
+              <th style="padding:14px 18px;text-align:left;font-weight:600;color:var(--s800);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em">Town / City</th>
+              <th style="padding:14px 18px;text-align:left;font-weight:600;color:var(--s800);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em">Visa Routes</th>
+              <th style="padding:14px 18px;text-align:center;font-weight:600;color:var(--s800);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em">Status</th>
+            </tr>
+          </thead>
+          <tbody id="results-tbody">
+            <!-- Results populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-state" style="text-align:center;padding:60px 24px;display:none">
+      <div style="font-size:16px;color:var(--s500);margin-bottom:12px">No results found</div>
+      <div style="font-size:13px;color:var(--s400)">Try searching with different keywords or check the spelling</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════ CTA BANNER ═══════════════ -->
+<section style="background:linear-gradient(135deg, var(--b950), #14305e);padding:60px 24px">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center" class="cta-grid">
+    <div class="reveal">
+      <h2 style="font-size:clamp(26px,3vw,38px);color:white;margin-bottom:14px;letter-spacing:-0.025em">Managing sponsored workers?</h2>
+      <p style="font-size:16px;color:rgba(255,255,255,0.65);line-height:1.75;margin-bottom:28px;font-weight:400">Keep your employee records audit-ready. HR Managing helps you maintain complete documentation, track attendance, store visas and right-to-work checks, and stay compliant with Home Office requirements.</p>
+      <a href="https://hms.hrmanaging.co.uk/company-request" class="btn bw" target="_blank" rel="noopener">Start Your Free Trial <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="reveal from-right" style="display:flex;align-items:center;justify-content:center">
+      <div style="width:100%;max-width:300px;padding:32px;background:rgba(255,255,255,.08);border-radius:12px;border:1px solid rgba(255,255,255,.12);text-align:center">
+        <div style="font-size:48px;font-weight:700;color:var(--b300);line-height:1;margin-bottom:8px">100%</div>
+        <div style="font-size:13px;color:var(--s400)">of records audit-ready from day one</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="footer-in">
+    <p>&copy; 2026 HR Managing. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="help.html">Help</a>
+      <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers" target="_blank">Home Office Register</a>
+      <a href="index.html">Back to Home</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
+<!-- PapaParse for CSV parsing -->
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+<script>
+(function() {
+  'use strict';
+
+  let sponsorData = [];
+  let filteredData = [];
+
+  // ── Strategy ──────────────────────────────────────────────────────────────────
+  // We use our own Cloudflare Worker as a proxy. The worker:
+  //   1. Calls the gov.uk content API to find the latest CSV URL
+  //   2. Fetches the CSV server-side (no CORS issues)
+  //   3. Returns the CSV to us with proper CORS headers
+  //   4. Caches results for 4 hours (fast + fresh)
+  //
+  // This means we never need to hardcode URLs or rely on free CORS proxies.
+  // The CSV URL can change daily and it still works automatically.
+  // ─────────────────────────────────────────────────────────────────────────────
+
+  // ╔══════════════════════════════════════════════════════════════════╗
+  // ║  UPDATE THIS URL after deploying your Cloudflare Worker.       ║
+  // ║  It will look like: https://sponsor-csv.yourname.workers.dev   ║
+  // ╚══════════════════════════════════════════════════════════════════╝
+  const WORKER_URL = 'https://sponsor-csv.contact-insataiagency.workers.dev/csv';
+
+  // Fallback: free CORS proxies (used ONLY if the worker is unreachable)
+  const GOV_API = 'https://www.gov.uk/api/content/government/publications/register-of-licensed-sponsors-workers';
+  const FALLBACK_CSV_URL = 'https://assets.publishing.service.gov.uk/media/69c11c15cfa346b9d4704a4b/2026-03-23_-_Worker_and_Temporary_Worker.csv';
+  const CORS_PROXIES = [
+    url => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
+    url => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+  ];
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initScrollReveal();
+    fetchSponsorData();
+  });
+
+  // ── Scroll reveal ────────────────────────────────────────────────────────────
+  function initScrollReveal() {
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  }
+
+  // ── Fetch with timeout helper ─────────────────────────────────────────────────
+  async function fetchWithTimeout(url, timeoutMs = 30000) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const res = await fetch(url, { signal: controller.signal });
+      clearTimeout(timeoutId);
+      return res;
+    } catch (err) {
+      clearTimeout(timeoutId);
+      throw err;
+    }
+  }
+
+  // ── Validate that a response looks like CSV ───────────────────────────────────
+  function validateCsv(text) {
+    const trimmed = text.trim();
+    if (trimmed.startsWith('<')) throw new Error('Got HTML instead of CSV');
+    if (trimmed.startsWith('{') || trimmed.startsWith('[')) throw new Error('Got JSON instead of CSV');
+    if (!trimmed.includes(',') || trimmed.split('\n').length < 10) throw new Error('Response does not look like CSV');
+    return text;
+  }
+
+  // ── Primary path: fetch CSV from our Cloudflare Worker ────────────────────────
+  async function fetchFromWorker() {
+    setLoadingMsg('Downloading the Home Office sponsor register...');
+    const res = await fetchWithTimeout(WORKER_URL, 45000);
+    if (!res.ok) throw new Error(`Worker returned HTTP ${res.status}`);
+    const text = await res.text();
+    return validateCsv(text);
+  }
+
+  // ── Fallback path: resolve URL from gov.uk API + use CORS proxy ───────────────
+  async function fetchFromFallback() {
+    // Try to resolve current URL
+    let csvUrl = FALLBACK_CSV_URL;
+    try {
+      setLoadingMsg('Resolving latest register URL...');
+      const res = await fetchWithTimeout(GOV_API, 10000);
+      if (res.ok) {
+        const json = await res.json();
+        const attachments = json.details?.attachments || [];
+        const csv = attachments.find(a =>
+          (a.content_type === 'text/csv' || (a.url || '').endsWith('.csv')) &&
+          ((a.title || '').toLowerCase().includes('worker') ||
+           (a.url || '').toLowerCase().includes('worker'))
+        );
+        if (csv?.url) {
+          csvUrl = csv.url.startsWith('http') ? csv.url : 'https://assets.publishing.service.gov.uk' + csv.url;
+        }
+      }
+    } catch (e) {
+      console.warn('Gov.uk API failed, using fallback URL:', e.message);
+    }
+
+    // Try each CORS proxy
+    for (let i = 0; i < CORS_PROXIES.length; i++) {
+      try {
+        setLoadingMsg(i === 0
+          ? 'Downloading via backup route...'
+          : `Trying backup proxy ${i + 1}...`);
+        const res = await fetchWithTimeout(CORS_PROXIES[i](csvUrl), 30000);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return validateCsv(await res.text());
+      } catch (err) {
+        console.warn(`CORS proxy ${i + 1} failed:`, err.message);
+        if (i === CORS_PROXIES.length - 1) throw err;
+      }
+    }
+  }
+
+  // ── Main orchestration ────────────────────────────────────────────────────────
+  async function fetchSponsorData() {
+    const loadingEl = document.getElementById('loading-state');
+    const errorEl   = document.getElementById('error-state');
+    loadingEl.style.display = 'block';
+    errorEl.style.display   = 'none';
+
+    let csvText;
+
+    // Primary: try our Cloudflare Worker
+    try {
+      csvText = await fetchFromWorker();
+      console.log('CSV loaded via Cloudflare Worker');
+    } catch (workerErr) {
+      console.warn('Worker failed, trying fallback:', workerErr.message);
+
+      // Fallback: try CORS proxies
+      try {
+        csvText = await fetchFromFallback();
+        console.log('CSV loaded via CORS proxy fallback');
+      } catch (fallbackErr) {
+        loadingEl.style.display = 'none';
+        showError('Could not download the Home Office sponsor register. Please check your connection and try again.');
+        return;
+      }
+    }
+
+    // Step 3: parse CSV
+    Papa.parse(csvText, {
+      header: true,
+      dynamicTyping: false,
+      skipEmptyLines: true,
+      complete: results => {
+        console.log('CSV columns detected:', results.meta.fields);
+
+        // Real gov.uk columns: "Organisation Name", "Town/City", "County", "Type & Rating", "Route"
+        sponsorData = results.data.filter(row =>
+          row['Organisation Name'] || row['Organisation name']
+        );
+
+        if (sponsorData.length === 0) {
+          loadingEl.style.display = 'none';
+          showError(
+            'Data downloaded but could not be read — the register format may have changed. ' +
+            'Columns detected: ' + (results.meta.fields || []).join(', ')
+          );
+          return;
+        }
+
+        filteredData = sponsorData;
+        loadingEl.style.display = 'none';
+
+        // Animate counter with the real count
+        animateCounter(document.getElementById('sponsor-counter'), sponsorData.length);
+        displayResults(sponsorData);
+      },
+      error: err => {
+        console.error('PapaParse error:', err);
+        loadingEl.style.display = 'none';
+        showError('The register file downloaded but could not be parsed. Please try again.');
+      }
+    });
+  }
+
+  function setLoadingMsg(msg) {
+    const el = document.getElementById('loading-msg');
+    if (el) el.textContent = msg;
+  }
+
+  // ── Expose retry for the error-state button ───────────────────────────────────
+  window.retryFetch = function() {
+    document.getElementById('error-state').style.display = 'none';
+    document.getElementById('sponsor-counter').textContent = '—';
+    fetchSponsorData();
+  };
+
+  // ── Error state ───────────────────────────────────────────────────────────────
+  function showError(msg) {
+    const el = document.getElementById('error-state');
+    el.querySelector('.error-msg').textContent = msg;
+    el.style.display = 'block';
+  }
+
+  // ── Display results ───────────────────────────────────────────────────────────
+  const DISPLAY_LIMIT = 500;
+
+  function displayResults(data) {
+    const tbody     = document.getElementById('results-tbody');
+    const container = document.getElementById('results-container');
+    const emptyEl   = document.getElementById('empty-state');
+    const countEl   = document.getElementById('result-count');
+    const limitNote = document.getElementById('results-limit-note');
+
+    tbody.innerHTML = '';
+
+    if (data.length === 0) {
+      container.style.display = 'none';
+      emptyEl.style.display = 'block';
+      return;
+    }
+
+    container.style.display = 'block';
+    emptyEl.style.display   = 'none';
+    countEl.textContent     = data.length.toLocaleString();
+
+    // Show limit note when results exceed cap
+    if (data.length > DISPLAY_LIMIT) {
+      limitNote.textContent  = `Showing first ${DISPLAY_LIMIT.toLocaleString()} of ${data.length.toLocaleString()} results — refine your search to narrow down.`;
+      limitNote.style.display = 'block';
+    } else {
+      limitNote.style.display = 'none';
+    }
+
+    data.slice(0, DISPLAY_LIMIT).forEach(row => {
+      const tr = document.createElement('tr');
+      tr.style.cssText = 'border-bottom:1px solid var(--s100);transition:background .15s;cursor:default';
+      tr.onmouseover = () => { tr.style.background = 'var(--s50)'; };
+      tr.onmouseout  = () => { tr.style.background = 'transparent'; };
+
+      // Column name: try both capitalisation variants
+      const name  = row['Organisation Name'] || row['Organisation name'] || '';
+      const city  = row['Town/City'] || '';
+      const county = row['County'] || '';
+
+      // Build location string
+      const location = (city && county && county !== city)
+        ? `${city}, ${county}` : city;
+
+      // Route/type from real CSV columns
+      const route      = row['Route'] || '';
+      const typeRating = row['Type & Rating'] || '';
+
+      // Condense long route strings
+      let routeDisplay = route || typeRating || '';
+      if (routeDisplay.length > 48) routeDisplay = routeDisplay.slice(0, 45) + '…';
+
+      tr.innerHTML = `
+        <td style="padding:12px 18px;color:var(--s900);font-weight:500;font-size:13.5px">${escapeHtml(name)}</td>
+        <td style="padding:12px 18px;color:var(--s600);font-size:13px">${escapeHtml(location)}</td>
+        <td style="padding:12px 18px;color:var(--s600);font-size:12.5px">${escapeHtml(routeDisplay)}</td>
+        <td style="padding:12px 18px;text-align:center">
+          <span style="display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:6px;background:#E6F4EA;color:#1a7534;font-size:11px;font-weight:600;white-space:nowrap">
+            <svg style="width:11px;height:11px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Active
+          </span>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  // ── Search filter ─────────────────────────────────────────────────────────────
+  window.filterSponsors = function() {
+    const q = document.getElementById('search-input').value.toLowerCase().trim();
+    filteredData = q.length === 0 ? sponsorData : sponsorData.filter(row => {
+      const name   = (row['Organisation Name'] || row['Organisation name'] || '').toLowerCase();
+      const city   = (row['Town/City'] || '').toLowerCase();
+      const county = (row['County'] || '').toLowerCase();
+      return name.includes(q) || city.includes(q) || county.includes(q);
+    });
+    displayResults(filteredData);
+  };
+
+  // ── Counter animation (called after real count is known) ──────────────────────
+  function animateCounter(el, end) {
+    if (!el || !end) return;
+    const duration = 2200;
+    const easeOut  = t => 1 - Math.pow(1 - t, 3);
+    let start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      const p = Math.min((ts - start) / duration, 1);
+      el.textContent = Math.floor(easeOut(p) * end).toLocaleString();
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // ── Escape HTML (security) ────────────────────────────────────────────────────
+  function escapeHtml(s) {
+    const m = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+    return String(s).replace(/[&<>"']/g, c => m[c]);
+  }
+
+  // ── Nav scroll shadow ─────────────────────────────────────────────────────────
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.nav');
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 5);
+  });
+
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HR Managing Terms of Service — the rules and conditions for using our UK HR management platform.">
+<title>Terms of Service - HR Managing</title>
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .legal-body { max-width:780px; margin:0 auto; padding:60px 24px 80px; }
+  .legal-body h2 { font-size:clamp(20px,2.5vw,26px); margin:40px 0 12px; color:var(--s900); }
+  .legal-body h3 { font-size:17px; margin:28px 0 8px; color:var(--s800); }
+  .legal-body p { font-size:15px; line-height:1.85; color:var(--s600); margin-bottom:14px; }
+  .legal-body ul { margin:0 0 14px 20px; }
+  .legal-body li { font-size:15px; line-height:1.85; color:var(--s600); margin-bottom:6px; }
+  .legal-body a { color:var(--b600); text-decoration:none; }
+  .legal-body a:hover { text-decoration:underline; }
+  .legal-meta { font-size:13px; color:var(--s400); margin-bottom:32px; padding-bottom:24px; border-bottom:1px solid var(--s200); }
+</style>
+</head>
+<body>
+
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M6 6l12 12"/></symbol>
+</svg>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="nav">
+  <div class="nav-in">
+    <a href="index.html" class="logo"><img id="site-logo" src="logo.png" alt="HR Managing Logo" class="logo-img"></a>
+    <div class="nav-links">
+      <a href="index.html" class="nl">Home</a>
+      <a href="about.html" class="nl">About Us</a>
+      <a href="features.html" class="nl">Features</a>
+      <a href="sponsor-checker.html" class="nl">Sponsor Licence Checker</a>
+      <a href="https://user-auth.apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/auth/realms/ExternalChecker/protocol/openid-connect/auth?redirect_uri=https%3A%2F%2Fright-to-work.service.gov.uk%2Frtw-view%2Fchecker-details%2Fredirection&state=46e5a3be7d4324e58a7e73ad641fcfc8&client_id=external-checker-rtwr&nonce=197c39160ec27401a6d055d435554153&response_type=code&scope=openid%20email%20profile" class="nl" target="_blank" rel="noopener noreferrer">Right to Work <svg width="11" height="11"><use href="#i-ext"/></svg></a>
+      <a href="index.html#pricing" class="nl">Pricing</a>
+      <a href="contact.html" class="nl">Contact Us</a>
+      <a href="https://hms.hrmanaging.co.uk/company-request" class="nav-cta" target="_blank" rel="noopener">Book a Free Trial <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+    </div>
+    <button class="mob-tog" onclick="document.getElementById('mob-menu').classList.add('open')" aria-label="Open menu"><svg width="22" height="22"><use href="#i-menu"/></svg></button>
+  </div>
+</nav>
+<div id="mob-menu" class="mob-menu">
+  <div class="mob-hdr"><div class="logo-text">HR<span>Managing</span></div><button class="mob-close" onclick="document.getElementById('mob-menu').classList.remove('open')" aria-label="Close menu"><svg width="22" height="22"><use href="#i-close"/></svg></button></div>
+  <a href="index.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Home</a>
+  <a href="about.html" onclick="document.getElementById('mob-menu').classList.remove('open')">About Us</a>
+  <a href="features.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Features</a>
+  <a href="sponsor-checker.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Sponsor Licence Checker</a>
+  <a href="https://user-auth.apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/auth/realms/ExternalChecker/protocol/openid-connect/auth?redirect_uri=https%3A%2F%2Fright-to-work.service.gov.uk%2Frtw-view%2Fchecker-details%2Fredirection&state=46e5a3be7d4324e58a7e73ad641fcfc8&client_id=external-checker-rtwr&nonce=197c39160ec27401a6d055d435554153&response_type=code&scope=openid%20email%20profile" target="_blank" rel="noopener noreferrer" onclick="document.getElementById('mob-menu').classList.remove('open')">Right to Work ↗</a>
+  <a href="index.html#pricing" onclick="document.getElementById('mob-menu').classList.remove('open')">Pricing</a>
+  <a href="contact.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Contact Us</a>
+  <a href="https://hms.hrmanaging.co.uk/company-request" target="_blank" rel="noopener" style="color:var(--b600);font-weight:700">Book a Free Trial</a>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" style="min-height:auto;padding:48px 24px">
+  <div class="hero-in" style="grid-template-columns:1fr;gap:16px;text-align:center">
+    <div><h1 style="font-size:clamp(28px,3.5vw,42px);color:white;letter-spacing:-0.025em">Terms of Service</h1></div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTENT ═══════════════ -->
+<div class="legal-body">
+
+  <div class="legal-meta">Last updated: 26 March 2026</div>
+
+  <p>These terms of service ("Terms") govern your use of the HR Managing website (hrmanaging.co.uk) and the HR Managing application (hms.hrmanaging.co.uk), operated by HR Managing ("we", "us", "our"). By accessing or using our services, you agree to be bound by these Terms.</p>
+
+  <h2>1. Service description</h2>
+  <p>HR Managing is a cloud-based Human Resource Management System designed for UK small businesses. The service allows companies to manage employee records, track attendance, handle holiday requests, store documents, conduct annual reviews, and maintain compliance with Home Office and UK employment regulations.</p>
+
+  <h2>2. Account registration</h2>
+  <p>To use HR Managing, you must register for a company account. When registering, you agree to:</p>
+  <ul>
+    <li>Provide accurate and complete information</li>
+    <li>Keep your login credentials secure and confidential</li>
+    <li>Accept responsibility for all activity that occurs under your account</li>
+    <li>Notify us immediately of any unauthorised use of your account</li>
+  </ul>
+  <p>You must be at least 18 years old and have the legal authority to bind your company to these Terms.</p>
+
+  <h2>3. Free trial</h2>
+  <p>We offer a 14-day free trial with full access to all features. No credit card is required to start a trial. At the end of the trial period, your account will become inactive unless you select a paid plan. All data entered during the trial will be preserved if you choose to continue.</p>
+
+  <h2>4. Pricing and payment</h2>
+  <p>Paid plans are billed monthly on a per-employee basis. Current pricing is displayed on our website at <a href="index.html#pricing">hrmanaging.co.uk</a>. We reserve the right to change pricing with 30 days written notice to active subscribers.</p>
+  <p>You are responsible for paying all fees associated with your chosen plan. Failure to pay may result in suspension or termination of your account.</p>
+
+  <h2>5. Your data</h2>
+  <p>You retain full ownership of all data you enter into HR Managing. We do not claim any ownership rights over your company data, employee records, or uploaded documents.</p>
+  <p>You are responsible for the accuracy, legality, and appropriateness of the data you enter. You must ensure that you have the necessary consent and legal basis to process employee personal data through our platform.</p>
+  <p>We act as a data processor on your behalf. Our responsibilities as a processor are detailed in our <a href="privacy.html">Privacy Policy</a>.</p>
+
+  <h2>6. Acceptable use</h2>
+  <p>You agree not to use HR Managing to:</p>
+  <ul>
+    <li>Violate any applicable UK or international laws or regulations</li>
+    <li>Store data that is illegal, defamatory, or infringes on the rights of others</li>
+    <li>Attempt to gain unauthorised access to other accounts or company data</li>
+    <li>Interfere with the security or performance of the platform</li>
+    <li>Use the service for any purpose other than legitimate HR management</li>
+  </ul>
+
+  <h2>7. Data security and isolation</h2>
+  <p>HR Managing uses a multi-tenant architecture where each company's data is logically isolated from all other companies on the platform. We implement appropriate technical and organisational security measures as described in our <a href="privacy.html">Privacy Policy</a>.</p>
+
+  <h2>8. Service availability</h2>
+  <p>We aim to keep HR Managing available at all times, but we do not guarantee uninterrupted access. We may occasionally need to perform maintenance, updates, or address technical issues that temporarily affect availability. We will provide reasonable notice of planned downtime where possible.</p>
+
+  <h2>9. Limitation of liability</h2>
+  <p>HR Managing is provided "as is" and "as available". While we design our platform to support compliance with Home Office and UK employment requirements, we do not guarantee that use of our service will ensure full regulatory compliance. You remain responsible for your own legal compliance obligations.</p>
+  <p>To the maximum extent permitted by UK law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenue, arising from your use of the service.</p>
+  <p>Our total liability for any claim arising from or related to these Terms shall not exceed the total fees paid by you in the 12 months preceding the claim.</p>
+
+  <h2>10. Cancellation and termination</h2>
+  <p>You may cancel your account at any time by contacting us at support@hrmanaging.co.uk. Upon cancellation:</p>
+  <ul>
+    <li>Your access to the platform will continue until the end of your current billing period</li>
+    <li>You may request an export of your data before your account is deactivated</li>
+    <li>Your data will be deleted within 90 days of account closure unless legal retention requirements apply</li>
+  </ul>
+  <p>We may terminate or suspend your account if you breach these Terms, with notice where reasonably practicable.</p>
+
+  <h2>11. Intellectual property</h2>
+  <p>The HR Managing platform, website, branding, and all related content are owned by HR Managing and protected by UK intellectual property laws. You may not copy, modify, distribute, or reverse-engineer any part of our platform without our written permission.</p>
+
+  <h2>12. Changes to these terms</h2>
+  <p>We may update these Terms from time to time. We will notify active subscribers of material changes by email at least 14 days before they take effect. Continued use of the service after changes become effective constitutes acceptance of the revised Terms.</p>
+
+  <h2>13. Governing law</h2>
+  <p>These Terms are governed by the laws of England and Wales. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+
+  <h2>14. Contact us</h2>
+  <p>If you have any questions about these Terms, please contact us:</p>
+  <p>Email: <a href="mailto:support@hrmanaging.co.uk">support@hrmanaging.co.uk</a><br>
+  Website: <a href="https://hrmanaging.co.uk">hrmanaging.co.uk</a></p>
+
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="footer-in">
+    <p>&copy; 2026 HR Managing. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="help.html">Help</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

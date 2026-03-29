@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn about HR Managing — a UK-based HR management system built to help small businesses stay compliant with Home Office requirements.">
+<title>About Us - HR Managing</title>
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.75l6 6 9-13.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24" fill="currentColor" opacity=".07"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M6 6l12 12"/></symbol>
+</svg>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="nav">
+  <div class="nav-in">
+    <a href="index.html" class="logo"><img id="site-logo" src="logo.png" alt="HR Managing Logo" class="logo-img"></a>
+    <div class="nav-links">
+      <a href="index.html" class="nl">Home</a>
+      <a href="about.html" class="nl active">About Us</a>
+      <a href="features.html" class="nl">Features</a>
+      <a href="sponsor-checker.html" class="nl">Sponsor Licence Checker</a>
+      <a href="https://user-auth.apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/auth/realms/ExternalChecker/protocol/openid-connect/auth?redirect_uri=https%3A%2F%2Fright-to-work.service.gov.uk%2Frtw-view%2Fchecker-details%2Fredirection&state=46e5a3be7d4324e58a7e73ad641fcfc8&client_id=external-checker-rtwr&nonce=197c39160ec27401a6d055d435554153&response_type=code&scope=openid%20email%20profile" class="nl" target="_blank" rel="noopener noreferrer">Right to Work <svg width="11" height="11"><use href="#i-ext"/></svg></a>
+      <a href="index.html#pricing" class="nl">Pricing</a>
+      <a href="contact.html" class="nl">Contact Us</a>
+      <a href="https://hms.hrmanaging.co.uk/company-request" class="nav-cta" target="_blank" rel="noopener">Book a Free Trial <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+    </div>
+    <button class="mob-tog" onclick="document.getElementById('mob-menu').classList.add('open')" aria-label="Open menu"><svg width="22" height="22"><use href="#i-menu"/></svg></button>
+  </div>
+</nav>
+<div id="mob-menu" class="mob-menu">
+  <div class="mob-hdr"><div class="logo-text">HR<span>Managing</span></div><button class="mob-close" onclick="document.getElementById('mob-menu').classList.remove('open')" aria-label="Close menu"><svg width="22" height="22"><use href="#i-close"/></svg></button></div>
+  <a href="index.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Home</a>
+  <a href="about.html" style="color:var(--b600);font-weight:600" onclick="document.getElementById('mob-menu').classList.remove('open')">About Us</a>
+  <a href="features.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Features</a>
+  <a href="sponsor-checker.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Sponsor Licence Checker</a>
+  <a href="https://user-auth.apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/auth/realms/ExternalChecker/protocol/openid-connect/auth?redirect_uri=https%3A%2F%2Fright-to-work.service.gov.uk%2Frtw-view%2Fchecker-details%2Fredirection&state=46e5a3be7d4324e58a7e73ad641fcfc8&client_id=external-checker-rtwr&nonce=197c39160ec27401a6d055d435554153&response_type=code&scope=openid%20email%20profile" target="_blank" rel="noopener noreferrer" onclick="document.getElementById('mob-menu').classList.remove('open')">Right to Work ↗</a>
+  <a href="index.html#pricing" onclick="document.getElementById('mob-menu').classList.remove('open')">Pricing</a>
+  <a href="contact.html" onclick="document.getElementById('mob-menu').classList.remove('open')">Contact Us</a>
+  <a href="https://hms.hrmanaging.co.uk/company-request" target="_blank" rel="noopener" style="color:var(--b600);font-weight:700">Book a Free Trial</a>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" style="min-height:auto;padding:60px 24px">
+  <div class="hero-in" style="grid-template-columns:1fr;gap:20px;text-align:center">
+    <div class="reveal">
+      <div class="hero-badge"><div class="hero-dot"></div>Our Story</div>
+      <h1 style="font-size:clamp(34px,4vw,52px);color:white;margin-bottom:18px;letter-spacing:-0.025em">Built by people who understand<br><em>UK compliance</em></h1>
+      <p style="font-size:16px;color:rgba(255,255,255,0.65);margin-bottom:0;max-width:620px;margin-left:auto;margin-right:auto;line-height:1.75;font-weight:400">HR Managing was born from a simple truth: too many UK businesses are one audit away from losing everything. We built the HR system that makes compliance effortless.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ MISSION ═══════════════ -->
+<section style="padding:80px 24px;background:white">
+  <div style="max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center" class="about-grid">
+
+    <div class="reveal">
+      <div class="sec-tag">Why We Exist</div>
+      <h2 style="font-size:clamp(24px,3vw,36px);margin-bottom:18px">Supporting UK businesses with robust HR management</h2>
+      <p style="font-size:15px;line-height:1.8;color:var(--s600);margin-bottom:18px">As a business owner holding a sponsorship licence to sponsor migrant workers in the United Kingdom, you have mandatory sponsorship duties set out by the Home Office to comply with.</p>
+      <p style="font-size:15px;line-height:1.8;color:var(--s600);margin-bottom:18px">We are working day and night to support our clients to make sure they have a robust HR system in place to comply with Home Office and UK employment regulations.</p>
+      <p style="font-size:15px;line-height:1.8;color:var(--s600)">The Home Office require proper employee records including attendance logs, absence tracking, right to work documents, and holiday records. Without these, you risk licence suspension, penalties of up to <strong style="color:var(--s900)">£60,000 per illegal worker</strong>, and potential business closure.</p>
+    </div>
+
+    <div class="reveal from-right">
+      <div style="padding:40px;background:var(--s50);border-radius:18px;border:1px solid var(--s200)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+          <div style="text-align:center;padding:20px">
+            <div style="font-family:var(--fd);font-size:36px;font-weight:700;color:var(--b600);line-height:1">40+</div>
+            <div style="font-size:12.5px;color:var(--s500);margin-top:6px">Companies trust us</div>
+          </div>
+          <div style="text-align:center;padding:20px">
+            <div style="font-family:var(--fd);font-size:36px;font-weight:700;color:var(--b600);line-height:1">100%</div>
+            <div style="font-size:12.5px;color:var(--s500);margin-top:6px">Audit ready records</div>
+          </div>
+          <div style="text-align:center;padding:20px">
+            <div style="font-family:var(--fd);font-size:36px;font-weight:700;color:var(--green);line-height:1">5 min</div>
+            <div style="font-size:12.5px;color:var(--s500);margin-top:6px">Setup time</div>
+          </div>
+          <div style="text-align:center;padding:20px">
+            <div style="font-family:var(--fd);font-size:36px;font-weight:700;color:var(--green);line-height:1">24/7</div>
+            <div style="font-size:12.5px;color:var(--s500);margin-top:6px">Cloud access</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ VALUES ═══════════════ -->
+<section style="padding:80px 24px;background:var(--s50);border-top:1px solid var(--s200);border-bottom:1px solid var(--s200)">
+  <div style="max-width:1060px;margin:0 auto">
+    <div class="sec-hdr reveal">
+      <div class="sec-tag">Our Values</div>
+      <h2>What drives us every day</h2>
+      <p>Every decision we make comes back to three principles.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px" class="values-grid">
+      <div class="fc reveal" style="transition-delay:0s">
+        <div class="fc-ico"><svg width="22" height="22"><use href="#i-shield"/></svg></div>
+        <h3>Compliance first</h3>
+        <p>Every feature we build starts with one question: does this help businesses pass a Home Office audit? If it does not, we do not build it.</p>
+      </div>
+      <div class="fc reveal" style="transition-delay:.08s">
+        <div class="fc-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg></div>
+        <h3>Built for real people</h3>
+        <p>Our users are business owners, not IT professionals. Every screen is designed to be understood in seconds, with no training required.</p>
+      </div>
+      <div class="fc reveal" style="transition-delay:.16s">
+        <div class="fc-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg></div>
+        <h3>Your data, protected</h3>
+        <p>Each company's data is completely isolated. Your records are never shared, never sold, and always encrypted. UK-based cloud infrastructure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+<section style="padding:80px 24px;background:white">
+  <div style="max-width:1060px;margin:0 auto">
+    <div class="sec-hdr reveal">
+      <div class="sec-tag">Testimonials</div>
+      <h2>What our clients say</h2>
+      <p>Hear from UK businesses that use HR Managing to stay compliant and organised.</p>
+    </div>
+    <div class="tg">
+      <div class="tc reveal">
+        <div class="tc-q"><svg width="32" height="32"><use href="#i-quote"/></svg></div>
+        <div class="tc-stars"><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg></div>
+        <div class="tc-txt">We were using Excel spreadsheets to track everything. When we switched to HR Managing, it took us 5 minutes to set up and we immediately had all our employee records in one place. Our last audit went smoothly for the first time.</div>
+        <div class="tc-auth"><div class="tc-av">SM</div><div><div class="tc-name">Sarah Mitchell</div><div class="tc-role">Owner, Mitchell Catering Ltd</div></div></div>
+      </div>
+      <div class="tc reveal" style="transition-delay:.08s">
+        <div class="tc-q"><svg width="32" height="32"><use href="#i-quote"/></svg></div>
+        <div class="tc-stars"><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg></div>
+        <div class="tc-txt">As a sponsor licence holder, compliance is not optional. HR Managing gives us complete visibility over attendance, documents, and leave. The Home Office checks our records regularly and we are always prepared.</div>
+        <div class="tc-auth"><div class="tc-av">MR</div><div><div class="tc-name">Mohammed Rahman</div><div class="tc-role">Director, Rahman Professional Services</div></div></div>
+      </div>
+      <div class="tc reveal" style="transition-delay:.16s">
+        <div class="tc-q"><svg width="32" height="32"><use href="#i-quote"/></svg></div>
+        <div class="tc-stars"><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg></div>
+        <div class="tc-txt">I am not a tech person at all. But HR Managing is so simple that I had my whole team on it within a day. Holiday requests, attendance logs, documents — everything is in one place now. Wish I had found it sooner.</div>
+        <div class="tc-auth"><div class="tc-av">JP</div><div><div class="tc-name">James Porter</div><div class="tc-role">Manager, Porter and Sons Construction</div></div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:16px;font-size:12px;color:var(--s400)">Testimonials are from early adopters. Names used with permission.</div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cta-sec">
+  <div class="cta-box reveal from-scale">
+    <h2>Ready to get your records in order?</h2>
+    <p>Join UK businesses using HR Managing to stay organised, stay compliant, and protect their licence. Setup takes under 5 minutes.</p>
+    <div class="cta-btns">
+      <a href="https://hms.hrmanaging.co.uk/company-request" class="btn bw bl" target="_blank" rel="noopener">Start Your 14 Day Free Trial <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="cta-note">No credit card required · Cancel anytime · Full access to all features</div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="footer-in">
+    <p>&copy; 2026 HR Managing. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="help.html">Help</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
