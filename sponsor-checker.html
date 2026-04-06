@@ -227,7 +227,13 @@
   // ║  UPDATE THIS URL after deploying your Cloudflare Worker.       ║
   // ║  It will look like: https://sponsor-csv.yourname.workers.dev   ║
   // ╚══════════════════════════════════════════════════════════════════╝
-  const WORKER_URL = 'https://sponsor-csv.contact-insataiagency.workers.dev/csv';
+  // ╔══════════════════════════════════════════════════════════════════╗
+  // ║  REPLACE THIS URL with your own Cloudflare Worker URL.         ║
+  // ║  Deploy the Worker to your Cloudflare account first, then      ║
+  // ║  paste the URL here. Format:                                    ║
+  // ║  https://sponsor-csv.YOUR-ACCOUNT-NAME.workers.dev/csv         ║
+  // ╚══════════════════════════════════════════════════════════════════╝
+  const WORKER_URL = 'https://YOUR-CLOUDFLARE-WORKER-URL-HERE/csv';
 
   // Fallback: free CORS proxies (used ONLY if the worker is unreachable)
   const GOV_API = 'https://www.gov.uk/api/content/government/publications/register-of-licensed-sponsors-workers';
