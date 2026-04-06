@@ -458,14 +458,28 @@
       let routeDisplay = route || typeRating || '';
       if (routeDisplay.length > 48) routeDisplay = routeDisplay.slice(0, 45) + '…';
 
+      // Determine status based on Type & Rating
+      let statusText = 'Active';
+      let statusColor = '#E6F4EA';
+      let statusTextColor = '#1a7534';
+      let statusIcon = '<path d="M4.5 12.75l6 6 9-13.5"/>';
+
+      const lowerTypeRating = typeRating.toLowerCase();
+      if (lowerTypeRating.includes('b rating') || lowerTypeRating.includes('revoked') || lowerTypeRating.includes('suspended') || lowerTypeRating.includes('withdrawn')) {
+        statusText = 'Revoked';
+        statusColor = '#FCE8E6';
+        statusTextColor = '#c5221f';
+        statusIcon = '<path d="M6 18L18 6M6 6l12 12"/>';
+      }
+
       tr.innerHTML = `
         <td style="padding:12px 18px;color:var(--s900);font-weight:500;font-size:13.5px">${escapeHtml(name)}</td>
         <td style="padding:12px 18px;color:var(--s600);font-size:13px">${escapeHtml(location)}</td>
         <td style="padding:12px 18px;color:var(--s600);font-size:12.5px">${escapeHtml(routeDisplay)}</td>
         <td style="padding:12px 18px;text-align:center">
-          <span style="display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:6px;background:#E6F4EA;color:#1a7534;font-size:11px;font-weight:600;white-space:nowrap">
-            <svg style="width:11px;height:11px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.75l6 6 9-13.5"/></svg>
-            Active
+          <span style="display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:6px;background:${statusColor};color:${statusTextColor};font-size:11px;font-weight:600;white-space:nowrap">
+            <svg style="width:11px;height:11px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">${statusIcon}</svg>
+            ${statusText}
           </span>
         </td>
       `;
